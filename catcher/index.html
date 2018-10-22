@@ -2,10 +2,16 @@
 <html lang="zh-tw">
 <head>
   <meta charset="UTF-8">
-  <title>catcher game</title>
+  <title>神降好運 狂歡接彩球</title>
   <meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+  <meta property="og:title" content="神降好運 狂歡接彩球" />
+  <meta property="og:description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shuliu.github.io/catcher/" />
+  <meta property="og:image" content="https://shuliu.github.io/public/images/eventsite/catcher201810/FB_1200x630.jpg" />
   <script src="//cdn.rawgit.com/inexorabletash/polyfill/v0.1.42/polyfill.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.min.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124676634-1"></script>
   <script>
@@ -27,7 +33,7 @@
     <div class="ui_outer_wrap">
       <div class="ui_time_wrap">
         <div class="ui_time">
-          <p class="ui_text" id="timer-board">30</p>
+          <p class="ui_text" id="timer-board">0</p>
         </div>
       </div>
       <div class="ui_score_wrap">
@@ -43,14 +49,14 @@
   <div class="hint" style="display:none;">
     <div class="B_hint_wrap">
       <p class="hint_text">移動小丑接取落下的彩球，接到炸彈將直接結束遊戲，千萬要躲開！</p>
-      <a class="start" id="js-start-btn" href="javascript:void(0);" ></a>
+      <a class="start" id="js-check-to-start-btn" href="javascript:void(0);" ></a>
     </div>
   </div>
 
   <!-- Time's Up -->
   <div class="time_up" style="display: none;">
     <div class="B_info_wrap">
-      <p class="score_text">500</p>
+      <p class="score_text">0</p>
       <a class="FB js-FB-btn" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810" ></a>
       <a class="line mobile js-line-btn" target="_blank" href="http://line.naver.jp/R/msg/text/?http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810"></a>
       <a class="tip" target="_blank" href="#/雙11秘笈連結"></a>
@@ -59,20 +65,26 @@
   <!-- GAME OVER -->
   <div class="game_over" style="display: none;">
     <div class="B_info_wrap">
-      <p class="score_text">500</p>
+      <p class="score_text">0</p>
       <a class="FB js-FB-btn" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810" ></a>
       <a class="line mobile js-line-btn" target="_blank" href="http://line.naver.jp/R/msg/text/?http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810"></a>
       <a class="tip" target="_blank" href="#/雙11秘笈連結"></a>
     </div>
   </div>
 
+  <div class="loading">
+    <div class="block_ui" align="center">
+      <img src="/public/images/plugins/bx_loader.gif" />
+    </div>
+    <div class="bg"></div>
+  </div>
   <div class="bk" style="display:none;"></div>
 
   <div class="preload" style="display: none;">
-    <img rel="preload" src="/public/images/dark.png" />
-    <img rel="preload" src="/public/images/explosion.png" />
-    <img rel="preload" src="/public/images/happy.png" />
-    <img rel="preload" src="/public/images/walk.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher201810/dark.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher201810/explosion.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher201810/happy.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher201810/walk.png" />
   </div>
-<script type="text/javascript" src="main-fe875fa4810f3e8e6eb4.min.js"></script></body>
+<script type="text/javascript" src="main-3a3284aca23919dfb196.min.js"></script></body>
 </html>
