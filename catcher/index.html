@@ -14,22 +14,19 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.min.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124676634-1"></script>
-  <script>
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(arguments);}
-    // gtag('js', new Date());
 
-    // gtag('config', 'UA-124676634-1');
-  </script>
   <link href="https://www.senao.com.tw/event/reset.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/public/stylesheets/move.css" />
+  <link rel="stylesheet" href="/public/stylesheets/201903.css" />
 </head>
 <body>
   <div class="wrap-bg">
-    <div class="curtain_l"></div>
-    <div class="curtain_r"></div>
+    <!-- 遊戲主要 container -->
     <div id="gameBox"></div>
 
+    <!-- 人物 + 掉落物件 -->
+    <div class="boss"></div>
+
+    <!-- 計分板 UI Board -->
     <div class="ui_outer_wrap">
       <div class="ui_time_wrap">
         <div class="ui_time">
@@ -45,46 +42,53 @@
 
   </div>
 
-  <!-- start -->
+  <!-- 開始按鈕 start -->
   <div class="hint" style="display:none;">
     <div class="B_hint_wrap">
-      <p class="hint_text">移動小丑接取落下的彩球，接到炸彈將直接結束遊戲，千萬要躲開！</p>
+      <p class="hint_text">點選並拖住神歐米上班族接取落下的金幣，接到炸彈將直接結束遊戲，千萬要躲開！</p>
       <a class="start" id="js-check-to-start-btn" href="javascript:void(0);" ></a>
     </div>
   </div>
 
-  <!-- Time's Up -->
+  <!-- 計時結束 Time's Up -->
   <div class="time_up" style="display: none;">
     <div class="B_info_wrap">
       <p class="score_text">0</p>
-      <a class="FB js-FB-btn" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810" ></a>
-      <a class="line mobile js-line-btn" target="_blank" href="http://line.naver.jp/R/msg/text/?http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810"></a>
-      <a class="tip" target="_blank" href="#/雙11秘笈連結"></a>
+      <a class="FB js-FB-btn" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201903" ></a>
+      <a class="line mobile js-line-btn" target="_blank" href="http://line.naver.jp/R/msg/text/?文案文案文案文案文案文案http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201903"></a>
+      <a class="any" href=""></a>
+      <div class="s10"><a href=""><img src="/public/images/eventsite/catcher/201903/s10.png"></a></div>
     </div>
   </div>
+
   <!-- GAME OVER -->
   <div class="game_over" style="display: none;">
     <div class="B_info_wrap">
       <p class="score_text">0</p>
       <a class="FB js-FB-btn" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810" ></a>
-      <a class="line mobile js-line-btn" target="_blank" href="http://line.naver.jp/R/msg/text/?http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810"></a>
-      <a class="tip" target="_blank" href="#/雙11秘笈連結"></a>
+      <a class="line mobile js-line-btn" target="_blank" href="http://line.naver.jp/R/msg/text/?文案文案文案文案文案文案http%3A%2F%2Fonline.senao.com.tw%2Feventsite%2Fcatcher%2F201810"></a>
+      <a class="any" href=""></a>
+      <div class="s10"><a href=""><img src="/public/images/eventsite/catcher/201903/s10.png"></a></div>
     </div>
   </div>
 
+  <!-- Loading 轉圈圈圖示 -->
   <div class="loading">
     <div class="block_ui" align="center">
       <img src="/public/images/plugins/bx_loader.gif" />
     </div>
     <div class="bg"></div>
   </div>
+
+  <!-- 排版用 -->
   <div class="bk" style="display:none;"></div>
 
+  <!-- JS 控制相關物件 -->
   <div class="preload" style="display: none;">
-    <img rel="preload" src="/public/images/eventsite/catcher/201810/dark.png" />
-    <img rel="preload" src="/public/images/eventsite/catcher/201810/explosion.png" />
-    <img rel="preload" src="/public/images/eventsite/catcher/201810/happy.png" />
-    <img rel="preload" src="/public/images/eventsite/catcher/201810/walk.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher/201903/dark.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher/201903/explosion.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher/201903/happy.png" />
+    <img rel="preload" src="/public/images/eventsite/catcher/201903/walk.png" />
   </div>
-<script type="text/javascript" src="main-4ae49ff0c8bec6ff827a.min.js"></script></body>
+<script type="text/javascript" src="main-d89b46cb476b898dda4f.min.js"></script></body>
 </html>

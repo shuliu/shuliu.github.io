@@ -1,0 +1,866 @@
+body {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #11182b;
+  overflow-x: hidden;
+}
+
+/*背景*/
+.wrap-bg {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 650px;
+  background: url("/public/images/eventsite/catcher/201903/bg.jpg") center top;
+}
+
+.hint {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 140px;
+  height: 275px;
+  max-width: 410px;
+  width: 100%;
+  background: url("/public/images/eventsite/catcher/201903/hint.png")no-repeat center top;
+  z-index: 5002;
+  background-size: 100% auto;
+}
+
+.B_hint_wrap {
+  position: absolute;
+  width: 79%;
+  height: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding-bottom: 67.0732%;
+  top: 0;
+}
+
+.hint_text {
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  left: 5px;
+  right: 0;
+  top: 29%;
+  margin: 0 auto;
+  color: #e3260d;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+  color: #845518;
+}
+
+.ui_text {
+  font-family: arial;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  color: #e3260d;
+  font-size: 2.2rem;
+  line-height: 46px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.start {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 65%;
+  max-width: 168px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 21.7143%;
+  background: url("/public/images/eventsite/catcher/201903/START_btn.png") no-repeat center top;
+}
+
+
+.time_up {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 20px;
+  height: 0;
+  max-width: 408px;
+  width: 98%;
+  padding-bottom: 94.7993%;
+  background: url("/public/images/eventsite/catcher/201903/time_up.png") no-repeat center top;
+  z-index: 5000;
+  background-size: 100% auto;
+}
+
+
+.game_over {
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 43px;
+  height: 0;
+  max-width: 408px;
+  width: 98%;
+  padding-bottom: 94.7993%;
+  background: url("/public/images/eventsite/catcher/201903/game_over.png") no-repeat center top;
+  z-index: 5000;
+  background-size: 100% auto;
+}
+
+.B_info_wrap {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  padding-bottom: 87.7993%;
+  top: 0;
+}
+
+.s10 {
+  position: absolute;
+  top: 113%;
+  left: 0;
+  right: 0;
+}
+
+.FB {
+  display: block;
+  position: absolute;
+  left: 20%;
+  top: 83%;
+  width: 15%;
+  height: 0;
+  padding-bottom: 15%;
+  z-index: 2;
+  background: url("/public/images/eventsite/catcher/201903/FB_btn.png") no-repeat center top;
+  background-size: 100% auto;
+}
+
+.line {
+  display: block;
+  position: absolute;
+  right: 30%;
+  top: 83%;
+  width: 15%;
+  height: 0;
+  z-index: 2;
+  padding-bottom: 15%;
+  background: url("/public/images/eventsite/catcher/201903/Line_btn.png") no-repeat center top;
+  background-size: 100% auto;
+}
+
+.any {
+  display: block;
+  position: absolute;
+  right: 20%;
+  top: 83%;
+  width: 39%;
+  height: 0;
+  z-index: 2;
+  padding-bottom: 16%;
+  background: url("/public/images/eventsite/catcher/201903/40_btn.png") no-repeat center top;
+  background-size: 100% auto;
+}
+
+.FB:hover, .line:hover, .any:hover, .start:hover {
+  filter: contrast(1.3)
+}
+
+.score_text {
+  text-align: center;
+  font-family: arial;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 66%;
+  color: #e3260d;
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+
+.ui_outer_wrap {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.ui_time_wrap {
+  position: absolute;
+  width: 143px;
+  height: 46px;
+  left: 0;
+}
+
+.ui_score_wrap {
+  position: absolute;
+  width: 167px;
+  height: 46px;
+  right: 0;
+}
+
+.ui_time {
+  margin: 0 auto;
+  background: url("/public/images/eventsite/catcher/201903/ui-time.png") center top no-repeat;
+}
+
+.ui_score {
+  margin: 0 auto;
+  background: url("/public/images/eventsite/catcher/201903/ui-score.png") center top no-repeat;
+}
+
+.bk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4000;
+}
+
+.walk {
+  width: 220px;
+  height: 250px;
+  background-image: url("/public/images/eventsite/catcher/201903/walk.png");
+  -webkit-animation: play .5s steps(20) infinite;
+  -moz-animation: play .5s steps(20) infinite;
+  -ms-animation: play .5s steps(20) infinite;
+  -o-animation: play .5s steps(20) infinite;
+  animation: play .5s steps(20) infinite;
+}
+
+.happy {
+  width: 220px;
+  height: 250px;
+  background-image: url("/public/images/eventsite/catcher/201903/happy.png");
+
+  -webkit-animation: play .5s steps(20) infinite;
+  -moz-animation: play .5s steps(20) infinite;
+  -ms-animation: play .5s steps(20) infinite;
+  -o-animation: play .5s steps(20) infinite;
+  animation: play .5s steps(20) infinite;
+}
+
+.dark {
+  width: 220px;
+  height: 250px;
+  background-image: url("/public/images/eventsite/catcher/201903/dark.png");
+
+  -webkit-animation: dark 1s steps(20);
+  -moz-animation: dark 1s steps(20);
+  -ms-animation: dark 1s steps(20);
+  -o-animation: dark 1s steps(20);
+  animation: dark 1s steps(20);
+}
+
+.boss {
+  position: absolute;
+  margin: 0 auto;
+  position: absolute;
+  top: 43px;
+  left: 0;
+  right: 0;
+  width: 280px;
+  height: 258px;
+  z-index: 2000;
+  background-image: url("/public/images/eventsite/catcher/201903/boss.png");
+  -webkit-animation: boss 1s steps(30) infinite;
+  -moz-animation: boss 1s steps(30) infinite;
+  -ms-animation: boss 1s steps(30) infinite;
+  -o-animation: boss 1s steps(30) infinite;
+  animation: boss 1s steps(30) infinite;
+}
+
+.explosion {
+  width: 200px;
+  height: 200px;
+  background-image: url("/public/images/eventsite/catcher/201903/explosion.png");
+
+  -webkit-animation: explosion .7s steps(10);
+  -moz-animation: explosion .7s steps(10);
+  -ms-animation: explosion .7s steps(10);
+  -o-animation: explosion .7s steps(10);
+  animation: explosion .7s steps(10);
+}
+
+.bomb.bomb.bomb {
+  width: 165px;
+  height: 250px;
+  background-image: url("/public/images/eventsite/catcher/201903/bomb.png");
+
+  -webkit-animation: bomb .5s steps(5) infinite;
+  -moz-animation: bomb .5s steps(5) infinite;
+  -ms-animation: bomb .5s steps(5) infinite;
+  -o-animation: bomb .5s steps(5) infinite;
+  animation: bomb .5s steps(5) infinite;
+}
+
+/*.bomb.bomb.bomb {*/
+/*width: 165px;*/
+/*height: 250px;*/
+/*background-image: url("/public/images/eventsite/catcher/201810/bomb.png");*/
+
+/*-webkit-animation: bomb .5s steps(5) infinite;*/
+/*-moz-animation: bomb .5s steps(5) infinite;*/
+/*-ms-animation: bomb .5s steps(5) infinite;*/
+/*-o-animation: bomb .5s steps(5) infinite;*/
+/*animation: bomb .5s steps(5) infinite;*/
+/*}*/
+
+.coin {
+  width: 27px;
+  height: 27px;
+  background-image: url("/public/images/eventsite/catcher/201903/coin.png");
+  -webkit-animation: coin .5s steps(11) infinite;
+  -moz-animation: coin .5s steps(11) infinite;
+  -ms-animation: coin .5s steps(11) infinite;
+  -o-animation: coin .5s steps(11) infinite;
+  animation: coin .5s steps(11) infinite;
+
+}
+
+.bonus {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 1px #3f1606, 0px 1px 20px rgba(255, 255, 255, .5);
+
+  opacity: 0;
+  line-height: 20px;
+  -webkit-animation: bonus 1.3s 1 linear;
+  -moz-animation: bonus 1.3s 1 linear;
+  -ms-animation: bonus 1.3s 1 linear;
+  -o-animation: bonus 1.3s 1 linear;
+  animation: bonus 1.3s 1 cubic-bezier(0, .88, .79, .92);
+}
+
+.bonus-txt {
+  vertical-align: 10%;
+  font-size: 20px;
+}
+
+
+.walk, .happy, .dark {
+  transform: scale(.5)
+}
+
+.explosion {
+  transform: scale(1)
+}
+
+.bomb {
+  transform: scale(.3)
+}
+
+/*demo定位用 可刪除 start*/
+.walk, .happy, .explosion, .dark, .bomb, .coin {
+  position: absolute;
+  transform-origin: 0 0;
+}
+
+/*.walk{bottom: -3vh;left: 31%;}*/
+/*.happy{bottom:-3vh;left: 40%;}*/
+/*.dark{bottom:-3vh;left: 50%;}*/
+/*.explosion{top: 420px;left: 52%;}*/
+/*.bomb{top:200px;left: 45%;}*/
+/*.coin{position: absolute;top:300px;left: 45%;}*/
+/*.bonus{bottom:18vh;left: 602px;}*/
+/*demo定位用 可刪除 end */
+
+
+.mobile {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .wrap-bg {
+    height: 100%;
+    background: url("/public/images/eventsite/catcher/201903/bg_m.jpg") center top;
+    background-size: cover;
+  }
+
+  .boss {
+    transform: scale(.7)
+  }
+
+  .walk, .happy, .dark {
+    transform: scale(.4)
+  }
+
+
+  .score_text { /* font-size: 24vmin; */
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .FB {
+    left: 10%;
+  }
+
+  .line {
+    left: 30.5%;
+  }
+
+  .any {
+    right: 10%;
+  }
+
+  .tip {
+    left: 51%;
+  }
+
+  .line, .FB, .any {
+    transform: scale(1);
+  }
+
+  .time_up, .game_over {
+    transform: scale(1);
+    top: 3%;
+  }
+
+  .s10 {
+    top: 113%;
+  }
+
+  .hint {
+    transform: scale(1);
+  }
+
+  .start {
+    top: 66%;
+  }
+
+  .hint-text {
+    padding-top: 21%
+  }
+
+  .ui_outer_wrap {
+    width: 100%;
+  }
+
+  .ui_time_wrap {
+    left: 2vw;
+  }
+
+  .ui_score_wrap {
+    right: 2vw;
+  }
+
+  .ui_text {
+    font-size: 2rem;
+  }
+}
+
+/*ip5*/
+@media screen and (device-aspect-ratio: 40/71) {
+  .B_hint_wrap {
+    width: 84%
+  }
+
+  .start {
+    top: 78%;
+  }
+
+  .ui_outer_wrap {
+    transform: scale(.9);
+  }
+
+  .ui_score_wrap {
+    right: 0;
+  }
+
+  .ui_time_wrap {
+    right: 0;
+  }
+
+  .line, .FB, .any {
+    transform: scale(1);
+  }
+
+  .FB {
+    left: 9%;
+  }
+
+  .line {
+    left: 30.7%;
+  }
+
+  .any {
+    right: 8%;
+  }
+
+  .s10 {
+    top: 115%;
+  }
+
+}
+
+/*ipad*/
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .wrap-bg {
+    height: 100%;
+    background: url("/public/images/eventsite/catcher/201903/bg_m.jpg") center top;
+    background-size: cover;
+  }
+
+  .ui_time {
+    width: 100%;
+    padding-bottom: 34.5882%;
+    background: url("/public/images/eventsite/catcher/201903/ui-time.png") center top no-repeat;
+    background-size: 100% auto;
+  }
+
+  .ui_score {
+    width: 100%;
+    padding-bottom: 34.5882%;
+    background: url("/public/images/eventsite/catcher/201903/ui-score.png") center top no-repeat;
+    background-size: 100% auto;
+  }
+
+  .ui_text {
+    font-size: 3rem;
+    left: 14.7%;
+    top: 61%;
+  }
+
+  .time_up, .game_over {
+    transform: scale(1);
+    top: 2%;
+  }
+
+  .boss {
+    transform: scale(1);
+    top: 22%;
+  }
+}
+
+
+@-webkit-keyframes boss {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -8400px;
+  }
+}
+
+@-moz-keyframes boss {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -8400px;
+  }
+}
+
+@-ms-keyframes boss {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -8400px;
+  }
+}
+
+@-o-keyframes boss {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -8400px;
+  }
+}
+
+@keyframes boss {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -8400px;
+  }
+}
+
+@-webkit-keyframes dark {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@-moz-keyframes dark {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@-ms-keyframes dark {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@-o-keyframes dark {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@keyframes dark {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@-webkit-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@-moz-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@-ms-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@-o-keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+@keyframes play {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -4400px;
+  }
+}
+
+
+@-webkit-keyframes explosion {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -2000px;
+  }
+}
+
+@-moz-keyframes explosion {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -2000px;
+  }
+}
+
+@-ms-keyframes explosion {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -2000px;
+  }
+}
+
+@-o-keyframes explosion {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -2000px;
+  }
+}
+
+@keyframes explosion {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -2000px;
+  }
+}
+
+
+@-webkit-keyframes bomb {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -825px;
+  }
+}
+
+@-moz-keyframes bomb {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -825px;
+  }
+}
+
+@-ms-keyframes bomb {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -825px;
+  }
+}
+
+@-o-keyframes bomb {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -825px;
+  }
+}
+
+@keyframes bomb {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -825px;
+  }
+}
+
+
+@-webkit-keyframes coin {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -330px;
+  }
+}
+
+@-moz-keyframes coin {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -330px;
+  }
+}
+
+@-ms-keyframes coin {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -330px;
+  }
+}
+
+@-o-keyframes coin {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -330px;
+  }
+}
+
+@keyframes coin {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -330px;
+  }
+}
+
+@-ms-keyframes bonus {
+  from {
+    position: ;
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes bonus {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bonus {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes bonus {
+  0% {
+    bottom: 17vh;
+    left: 602px;
+    opacity: 0;
+  }
+  92% {
+    bottom: 24vh;
+    left: 602px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 24vh;
+    left: 602px;
+    opacity: 0;
+  }
+}
